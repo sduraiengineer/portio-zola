@@ -40,7 +40,8 @@
                 <div class="contact__widget_sitemap">
                     <h3>{{ trans(key='sitemap', lang=lang) }}</h3>
                     <ul>
-                        {% for sitemap in config.extra.sitemaps %}
+                        {% set lang_extra = config.extra[lang] %}
+                        {% for sitemap in lang_extra.sitemaps %}
                           <li><a href="{{ get_url(path=sitemap.url) }}">{{ sitemap.name }}</a></li>
                         {% endfor %}
                     </ul>

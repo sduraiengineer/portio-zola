@@ -1,6 +1,7 @@
-{% if config.extra.testimonial_file %}
+{% set lang_extra = config.extra[lang] %}
+{% if lang_extra.testimonial_file %}
 
-{% set testimonial_data = load_data(path=config.extra.testimonial_file) %}
+{% set testimonial_data = load_data(path=lang_extra.testimonial_file) %}
 
 <section class="section testimonial">
    <div class="testimonial__background_shape">

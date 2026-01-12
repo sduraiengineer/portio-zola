@@ -1,6 +1,7 @@
-{% if config.extra.resume_file %}
+{% set lang_extra = config.extra[lang] %}
+{% if lang_extra.resume_file %}
 
-{% set resume_data = load_data(path=config.extra.resume_file) %}
+{% set resume_data = load_data(path=lang_extra.resume_file) %}
 
 <section class="section resume" id="resume">
    <div class="resume__background"></div>

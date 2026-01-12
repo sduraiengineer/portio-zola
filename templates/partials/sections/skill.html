@@ -1,6 +1,7 @@
-{% if config.extra.skill_file %}
+{% set lang_extra = config.extra[lang] %}
+{% if lang_extra.skill_file %}
 
-{% set skill_data = load_data(path=config.extra.skill_file) %}
+{% set skill_data = load_data(path=lang_extra.skill_file) %}
 
 <section id="skill" class="section skill">
     <div class="skill__background_shape">

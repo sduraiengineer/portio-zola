@@ -1,6 +1,7 @@
-{% if config.extra.service_file %}
+{% set lang_extra = config.extra[lang] %}
+{% if lang_extra.service_file %}
 
-{% set service_data = load_data(path=config.extra.service_file) %}
+{% set service_data = load_data(path=lang_extra.service_file) %}
 
 <section class="section service" id="service">
   <div class="service__background">

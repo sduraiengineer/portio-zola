@@ -113,4 +113,16 @@
             }
         }
     }
+
+    .lang-switcher {
+        font-size: 12px;   // small, professional
+        font-weight: 100;
+        letter-spacing: 0.05em; // looks “engineered”
+        padding: 0.25rem 0.5rem;
+
+        &::after {
+            font-size: 10px; // makes ▼ arrow smaller too
+        }
     }
+
+}
